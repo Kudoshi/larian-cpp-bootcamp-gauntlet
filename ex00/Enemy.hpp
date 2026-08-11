@@ -2,10 +2,10 @@
 #include "Entity.hpp"
 
 class Enemy : public Entity {
-public:
-    Enemy(std::string name, int hp) : Entity(std::move(name)), m_hp(hp) {}            // name AND hp, both required
-    std::string describe() const override;      // -> "Enemy <name> (hp N)"
-    ~Enemy() override = default;
-private:
-    int m_hp;
+    public:
+        Enemy(std::string name, int hp) : Entity(std::move(name)), m_hp(hp) {} 
+        ~Enemy() override = default;
+        std::string describe() const override;
+    private:
+        int m_hp;
 };
