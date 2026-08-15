@@ -25,7 +25,7 @@ TEST_CASE("Removing an item dropping the count and has() stops finding it")
     inv.add("ITEM_1");
     inv.add("ITEM_2");
     int bfrCount = inv.count();
-    // inv.remove("ITEM_1");
+    inv.remove("ITEM_1");
     CHECK(inv.count() == bfrCount-1);
     CHECK_FALSE(inv.has("ITEM_1"));
 }
