@@ -8,16 +8,16 @@ TEST_CASE("Adding an item raises a count") {
     REQUIRE(inv.count() == 1);       // REQUIRE aborts the case; the line below is meaningless if this fails
 }
 
-// TEST_CASE("Find an added item and rejects a missing one")
-// {
-//     Inventory inv;
-//     inv.add("ITEM_1");
-//     inv.add("ITEM_2");
+TEST_CASE("Find an added item and rejects a missing one")
+{
+    Inventory inv;
+    // inv.add("ITEM_1");
+    // inv.add("ITEM_2");
 
-//     CHECK(inv.has("ITEM_1"));
+    CHECK(inv.has("ITEM_1"));
 
-//     REQUIRE(inv.has("ITEM_69") == false);
-// }
+    REQUIRE(inv.has("ITEM_69") == false);
+}
 
 // TEST_CASE("Removing an item dropping the count and has() stops finding it")
 // {
