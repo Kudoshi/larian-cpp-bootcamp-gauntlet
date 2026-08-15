@@ -5,7 +5,7 @@
 TEST_CASE("Adding an item raises a count") {
     Inventory inv;
     inv.add("item_1");
-    REQUIRE(inv.count() == 0);       // REQUIRE aborts the case; the line below is meaningless if this fails
+    REQUIRE(inv.count() == 1);       // REQUIRE aborts the case; the line below is meaningless if this fails
 }
 
 // TEST_CASE("Find an added item and rejects a missing one")
