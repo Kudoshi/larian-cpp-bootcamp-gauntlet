@@ -30,11 +30,12 @@ TEST_CASE("Removing an item dropping the count and has() stops finding it")
     CHECK_FALSE(inv.has("ITEM_1"));
 }
 
-// TEST_CASE("Remove missing item")
-// {
-//     Inventory inv;
-//     int bfrCount = inv.count();
-//     inv.remove("ITEM_420");
-//     CHECK(inv.count() == bfrCount);
-//     CHECK(inv.has("ITEM_1"));
-// }
+TEST_CASE("Remove missing item")
+{
+    Inventory inv;
+    
+    int bfrCount = inv.count();
+    inv.remove("ITEM_420");
+    CHECK(inv.count() == bfrCount);
+    CHECK(inv.has("ITEM_1"));
+}
