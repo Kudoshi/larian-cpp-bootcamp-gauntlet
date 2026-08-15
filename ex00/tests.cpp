@@ -11,8 +11,8 @@ TEST_CASE("Adding an item raises a count") {
 TEST_CASE("Find an added item and rejects a missing one")
 {
     Inventory inv;
-    // inv.add("ITEM_1");
-    // inv.add("ITEM_2");
+    inv.add("ITEM_1");
+    inv.add("ITEM_2");
 
     CHECK(inv.has("ITEM_1"));
 
