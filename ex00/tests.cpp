@@ -19,16 +19,16 @@ TEST_CASE("Find an added item and rejects a missing one")
     REQUIRE(inv.has("ITEM_69") == false);
 }
 
-// TEST_CASE("Removing an item dropping the count and has() stops finding it")
-// {
-//     Inventory inv;
-//     inv.add("ITEM_1");
-//     inv.add("ITEM_2");
-//     int bfrCount = inv.count();
-//     inv.remove("ITEM_1");
-//     CHECK(inv.count() == bfrCount-1);
-//     CHECK_FALSE(inv.has("ITEM_1"));
-// }
+TEST_CASE("Removing an item dropping the count and has() stops finding it")
+{
+    Inventory inv;
+    inv.add("ITEM_1");
+    inv.add("ITEM_2");
+    int bfrCount = inv.count();
+    // inv.remove("ITEM_1");
+    CHECK(inv.count() == bfrCount-1);
+    CHECK_FALSE(inv.has("ITEM_1"));
+}
 
 // TEST_CASE("Remove missing item")
 // {
