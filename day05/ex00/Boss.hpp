@@ -1,0 +1,12 @@
+#pragma once
+#include "Entity.hpp"
+
+class Boss : public Entity
+{
+    public: 
+        std::string describe() const override { 
+            return "Boss (hp 300)";
+        } ;
+        
+        ~Boss() override = default;
+};
